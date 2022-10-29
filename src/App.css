@@ -11,12 +11,7 @@ button i {
 	font-size: 2.5em;
 	padding: 2px;
 }
-button {
-	border: 2px solid black;
-	height: auto;
-	width: 80px;
-	border-radius: 5%;
-}
+
 header, footer {
 	background-color: var(--color1);
 	border: 1px solid black;
@@ -28,9 +23,21 @@ header, footer {
 	box-sizing: border-box;
 }
 header {
-	gap: 10px;
+	justify-content: space-around;
 	position: sticky;
 	top: 0;
+}
+header button {
+	border: 2px solid black;
+	height: auto;
+	min-width: 70px;
+	border-radius: 5%;
+}
+.chosen:before {
+	content: "";
+	position: relative;
+	bottom: 3px;
+	font-size: 2em;
 }
 footer {
 	position: sticky;
@@ -68,25 +75,15 @@ article.blog-post {
 	height: 60vh;
 	width: 100%;
 }
-/* .App-logo {
-	height: 10vmin;
-	pointer-events: none;
+
+.chosen {
+	background-color: lightslategray;
+	border: 3px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
-} 
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+.chosen:before {
+	content: "➤";
+	position: relative;
+	bottom: 3px;
+	font-size: 2em;
 }
-
-<img src= {logo} className="App-logo" alt="logo" />
-*/
