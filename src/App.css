@@ -1,12 +1,23 @@
 :root {
 	--color1: #0066cc;
 }
+
 body {
 	background-color: whitesmoke;
 	font-size: 1.2em;
-	min-height: 100vh;
-	min-width: 100vw;
+
 }
+
+div.App {
+	display: grid;
+	grid-auto-rows: 1fr 20fr 1fr;
+	grid-auto-columns: 1fr;
+	height: 100vh;
+	width: 100vw;
+	box-sizing: border-box;
+	overflow: scroll;
+}
+
 button i {
 	font-size: 2.5em;
 	padding: 2px;
@@ -22,33 +33,42 @@ header, footer {
 	padding: 10px;
 	box-sizing: border-box;
 }
+
 header {
 	justify-content: space-around;
 	position: sticky;
-	top: 0;
+	top: 0px;
+	right: 0px;
+	height: 80px
 }
+
 header button {
 	border: 2px solid black;
 	height: auto;
 	min-width: 70px;
 	border-radius: 5%;
 }
+
+footer {
+	position: sticky;
+	right: 0px;
+	bottom: 0px;
+	height: 40px;
+	padding: 0px;
+}
+
 .chosen:before {
 	content: "";
 	position: relative;
 	bottom: 3px;
 	font-size: 2em;
 }
-footer {
-	position: sticky;
-	right: 0;
-	height: 40px;
-	padding: 0px;
-}
+
 footer p {
 	padding: 0;
 	margin: 0;
 }
+
 article.blog-post {
 	background-color: whitesmoke;
 	box-sizing: border-box;
@@ -56,11 +76,13 @@ article.blog-post {
 	padding: 2% 10%;
 	text-indent: 20px;
 }
+
 .homepage {
 	margin: 0 auto;
 	text-align: center;
 	padding: 5%;
 }
+
 .homepage-icon {
 	font-size: 15em;
 }
@@ -70,6 +92,7 @@ article.blog-post {
 	margin: 0 auto;
 	padding: 2em;
 }
+
 .write-screen textarea{
 	font-size: 1.2em;
 	height: 60vh;
@@ -79,11 +102,4 @@ article.blog-post {
 .chosen {
 	background-color: lightslategray;
 	border: 3px solid black;
-}
-
-.chosen:before {
-	content: "➤";
-	position: relative;
-	bottom: 3px;
-	font-size: 2em;
 }

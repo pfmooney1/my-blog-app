@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Write(props) {
-	
 	function updatePage() {
 		let text = document.getElementById("textZone").value;
 		props.updatePostText(text);
@@ -13,8 +12,8 @@ function Write(props) {
 				id="textZone"
 				placeholder="Click to begin writing."
 				onChange={updatePage}
+				value={props.postText}
 			>
-				{props.postText}
 			</textarea>
 		</div>
 	);

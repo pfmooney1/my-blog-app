@@ -16,23 +16,20 @@ function App() {
 		return initialValue || "";
 	});
 
+
+
 	function returnLocationComponent() {
-		if (userLocation == "homepage") {
-			return <Homepage />
-		}
-		if (userLocation == "blogposts") {
-			return <Post />
-		}
-		if (userLocation == "settings") {
-			return <Settings />
-		}
-		if (userLocation == "write") {
-			return <Write 
-				postText = {postText}
-				updatePostText = {updatePostText}
-			/>
-		}
+		const Locations = {
+			"homepage": <Homepage />,
+			"blogposts": <Post />,
+			"settings": <Settings />,
+			"write": <Write postText={postText} updatePostText={updatePostText} />,
+		};
+		return Locations[userLocation];
 	}
+
+
+
 	useEffect(() => {
 		localStorage.setItem("postText", JSON.stringify(postText));
 	}, [postText]);
