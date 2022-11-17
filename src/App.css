@@ -5,7 +5,6 @@
 body {
 	background-color: whitesmoke;
 	font-size: 1.2em;
-
 }
 
 div.App {
@@ -18,11 +17,13 @@ div.App {
 	overflow: scroll;
 }
 
-button i {
+a i {
 	font-size: 2.5em;
 	padding: 2px;
 }
-
+a:active {
+	background-color: palegoldenrod;
+}
 header, footer {
 	background-color: var(--color1);
 	border: 1px solid black;
@@ -42,11 +43,14 @@ header {
 	height: 80px
 }
 
-header button {
+.button-nav {
 	border: 2px solid black;
 	height: auto;
 	min-width: 70px;
 	border-radius: 5%;
+	text-align: center;
+	background-color: whitesmoke;
+	color: black;
 }
 
 footer {
@@ -97,9 +101,4 @@ article.blog-post {
 	font-size: 1.2em;
 	height: 60vh;
 	width: 100%;
-}
-
-.chosen {
-	background-color: lightslategray;
-	border: 3px solid black;
 }
